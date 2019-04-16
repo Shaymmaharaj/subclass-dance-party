@@ -28,12 +28,23 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer)
+
+    $('.dancer').mouseover(function() {
+      $(this).animate({left: "-200px"},9000)
+    });
+    $('.dancer1').mouseover(function(event) {
+    
+    });
+    $('.dancer2').mouseover(function(event) {
+      $(this).animate({left: "1900px"},9000)
+      
+    });
   });
  
   $('.lineUp').on('click', function(event) {
     var arr = window.dancers;
 
-    var left = 0;
+    var left = 100;
     var top = 0;
     for(var i = 0; i < arr.length; i ++) {
       var dancer = arr[i];
@@ -45,18 +56,9 @@ $(document).ready(function() {
       }
       left += 250;
     };
-    // arr[0].setPosition(300, 300, 300)
-    console.log(arr)
-    // console.log(arr[0].top = 300)
-    // arr[0].css({"top": 300})
-    // $('.dancer').css({top:100});
-    // $('.dancer1').css({top:400});
-    // $('.dancer2').css({top:500});
-    // $('.dancer1').css({animationDuration: 5})
   });
-  // $('.Dancer').mouseover(function() {
-  //   console.log('test')
-  // });
+
+  
 
  
 

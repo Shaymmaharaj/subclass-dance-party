@@ -40,10 +40,26 @@ float: right;
 
 .dancer img {
   height: 300px;
+  -webkit-transform: scaleX(-1);
+  /* animation: none; */
+  /* animation: rotation 1s infinite linear; */
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 .dancer1 img {
-  height: 300px;
+  height: 250px;
+    animation: rotation 1s infinite linear;
 }
 span{
   display: flex;
+}
+
+.dancer2 img {
+  height: 300px;
 }
