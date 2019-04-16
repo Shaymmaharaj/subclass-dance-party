@@ -16,7 +16,6 @@ $(document).ready(function() {
      * to the stage.
      */
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
@@ -28,28 +27,18 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer)
   });
 
-  $('.dancer1').on('click', function(event) {
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-    var dancerMakerFunction = window[dancerMakerFunctionName];
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
-    $('body').append(dancer.$node);
-  });
+  $('.lineUp').on('click', function(event) {
+    var arr = window.dancers
+    // console.log(arr[0].top = 300)
+    // arr[0].css({"top": 300})
+    $('.dancer').css({top:300});
+    $('.dancer1').css({top:300});
+    $('.dancer2').css({top:300});
 
-  $('.dancer2').on('click', function(event) {
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-    var dancerMakerFunction = window[dancerMakerFunctionName];
-    var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
-    $('body').append(dancer.$node);
+
   });
 
 });

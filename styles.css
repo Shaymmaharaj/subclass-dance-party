@@ -25,7 +25,7 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-/* .dancer1{
+.dancer1{
   border:10px solid blue;
   border-radius:10px;
   position:absolute;
@@ -34,4 +34,4 @@ body, a:link, a:visited, a:active{
   border:10px solid green;
   border-radius:10px;
   position:absolute;
-} */
+}
