@@ -1,6 +1,6 @@
 var Dancer2 = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="dancer2"></span>');
+  this.$node = $('<span class="dancer2"><img class="Dancer2" src="https://media.giphy.com/media/ta0ttSeDKuCsg/giphy.gif"></img></span>');
   this.setPosition(top, left);
 };
 
