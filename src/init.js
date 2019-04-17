@@ -58,6 +58,49 @@ $(document).ready(function() {
     };
   });
 
+  $('.party').on('click', function(){
+    var arr = window.dancers;
+    var pth = function(node1,node2){
+      var result = 0;
+      var topNode1 = node1.top
+      var leftNode1 = node1.left
+
+      var topNode2 = node2.top
+      var leftNode2 = node2.left
+
+      var leftLength = leftNode2 - leftNode1
+      var topLength = topNode2 - topNode1
+
+     result = Math.sqrt((leftLength * leftLength) + (topLength * topLength)) 
+    // console.log(result)
+      return result
+      };
+      
+      var compare = function() {
+        var temp = Infinity;
+        var party = [];
+        for (var i = 0; i < arr.length; i++) {
+          for (var j = 0; j < arr.length; j++){
+
+            if (pth(arr[i],arr[j]) !== 0) {
+              if (pth(arr[i],arr[j]) < temp) {
+                temp = pth(arr[i], arr[j])
+                party.push(arr[i], arr[j])
+              }
+            }
+          }
+        }
+        console.log(temp)
+        console.log(party)
+        return temp;
+      }
+      compare();
+
+
+    
+   
+  });
+
   
 
  
